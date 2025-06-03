@@ -27,7 +27,7 @@ locals {
   project     = "weather-monitoring"
 }
 
-# Resource Group
+# Resource Group name
 module "resource_group" {
   source = "../../modules/resource-group"
   
