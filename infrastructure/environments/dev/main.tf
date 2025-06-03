@@ -24,7 +24,7 @@ provider "azurerm" {
 locals {
   environment = "dev"
   location    = "Sweden Central"
-  project     = "weather-monitoring"
+  project     = "weather-mon"
 }
 
 # Resource Group
