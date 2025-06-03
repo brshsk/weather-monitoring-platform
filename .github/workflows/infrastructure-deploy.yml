@@ -62,7 +62,7 @@ jobs:
         tofu plan -out=tfplan -input=false
         
     - name: Upload Plan
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: tfplan-${{ github.event.inputs.environment || 'dev' }}
         path: ./infrastructure/environments/${{ github.event.inputs.environment || 'dev' }}/tfplan
@@ -91,7 +91,7 @@ jobs:
         subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
     
     - name: Download Plan
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: tfplan-${{ github.event.inputs.environment || 'dev' }}
         path: ./infrastructure/environments/${{ github.event.inputs.environment || 'dev' }}
